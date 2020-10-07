@@ -62,9 +62,9 @@ public class GridListAdapter extends BaseAdapter {
             else
                 view = inflater.inflate(R.layout.grid_custom_row_layout, viewGroup, false);
 
-            viewHolder.name = (TextView) view.findViewById(R.id.name_label);
-            viewHolder.number = (TextView) view.findViewById(R.id.number_label);
-            viewHolder.emailID = (TextView) view.findViewById(R.id.email_label);
+            viewHolder.name = view.findViewById(R.id.name_label);
+            viewHolder.number = view.findViewById(R.id.number_label);
+            viewHolder.emailID = view.findViewById(R.id.email_label);
 
             view.setTag(viewHolder);
         } else
@@ -79,7 +79,7 @@ public class GridListAdapter extends BaseAdapter {
     }
 
 
-    private class ViewHolder {
+    private static class ViewHolder {
         private TextView name, number, emailID;
     }
 
